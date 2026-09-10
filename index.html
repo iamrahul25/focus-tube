@@ -5,82 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="FocusTube helps you watch toward who you want to become." />
     <title>FocusTube | Watch toward your future</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="app-shell">
-      <header class="topbar">
-        <a class="brand" href="#" aria-label="FocusTube home" data-home-link>
-          <span class="brand-mark"><span></span><span></span><span></span></span>
-          <span>focus<span class="brand-highlight">tube</span></span>
-        </a>
-        <div class="topbar-actions">
-          <span class="focus-pill"><span class="status-dot"></span><span data-focus-status>Focus mode on</span></span>
-          <button class="icon-button" type="button" aria-label="Open settings" title="Settings">⚙</button>
-          <div class="avatar" aria-label="Your profile">FT</div>
-        </div>
-      </header>
-
-      <main>
-        <section class="welcome-view" data-view="welcome">
-          <div class="welcome-copy">
-            <div class="eyebrow"><span class="eyebrow-line"></span> A better feed starts with a direction</div>
-            <h1>Watch toward<br /><em>who you want to become.</em></h1>
-            <p class="welcome-lede">FocusTube turns your intentions into a quieter, more useful video feed. No rabbit holes. Just the next helpful thing.</p>
-
-            <form class="intent-form" data-intent-form>
-              <label for="intent-input">What are you working toward?</label>
-              <div class="input-wrap">
-                <textarea id="intent-input" rows="2" placeholder="e.g. Become a React Native developer who builds useful things" required></textarea>
-                <button class="submit-button" type="submit" aria-label="Build my feed" title="Build my feed"><span>→</span></button>
-              </div>
-              <div class="suggestion-row" aria-label="Suggested goals">
-                <button type="button" class="suggestion" data-suggestion="Become a thoughtful software engineer">Software engineer</button>
-                <button type="button" class="suggestion" data-suggestion="Build strength and cycle farther">Cycling</button>
-                <button type="button" class="suggestion" data-suggestion="Take better photographs">Photography</button>
-              </div>
-            </form>
-          </div>
-          <div class="welcome-visual" aria-hidden="true">
-            <div class="orbit orbit-large"></div>
-            <div class="orbit orbit-small"></div>
-            <div class="visual-card visual-card-main">
-              <div class="visual-card-top"><span class="mini-play">▶</span><span>YOUR NEXT CHAPTER</span></div>
-              <div class="visual-sparkline"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="visual-card-bottom"><strong>Small steps, daily.</strong><span>01 / 04</span></div>
-            </div>
-            <div class="visual-note note-one"><span>✦</span> Curated for your future self</div>
-            <div class="visual-note note-two">less noise <span>↗</span></div>
-            <div class="visual-label">INTENTION<br /><strong>→</strong> ACTION</div>
-          </div>
-        </section>
-
-        <section class="feed-view hidden" data-view="feed">
-          <div class="feed-heading">
-            <div>
-              <div class="eyebrow"><span class="eyebrow-line"></span> Your intentional feed</div>
-              <h2>Keep becoming.</h2>
-              <p>Thoughtful videos selected for <strong data-intent-label>your direction</strong></p>
-            </div>
-            <button class="change-intent" type="button" data-change-intent>Change direction <span>↗</span></button>
-          </div>
-          <div class="feed-toolbar">
-            <div class="filter-tabs" role="tablist" aria-label="Feed categories">
-              <button class="filter-tab active" type="button" data-filter="all">For you</button>
-              <button class="filter-tab" type="button" data-filter="learn">Learn</button>
-              <button class="filter-tab" type="button" data-filter="make">Make</button>
-              <button class="filter-tab" type="button" data-filter="mindset">Mindset</button>
-            </div>
-            <span class="feed-count"><span class="status-dot"></span> 8 focused videos</span>
-          </div>
-          <div class="video-grid" data-video-grid></div>
-          <div class="feed-footer"><span class="footer-star">✦</span> Your attention is valuable. Spend it on purpose.</div>
-        </section>
-      </main>
-    </div>
-    <script src="app.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
